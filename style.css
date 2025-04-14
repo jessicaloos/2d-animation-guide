@@ -1,0 +1,26 @@
+
+body {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+h1 {
+  color: #ffd700;
+  transition: all 0.3s ease;
+}
+h1:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffd700;
+}
+h2 {
+  color: #ffd700;
+}
+a {
+  color: #ffd700;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #ffd700;
+  text-decoration: underline;
+}
