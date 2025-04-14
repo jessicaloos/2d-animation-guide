@@ -1,14 +1,450 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <style>
+    body {
+      scroll-behavior: smooth;
+      border-left: 2px solid #333;
+      border-right: 2px solid #333;
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+    nav {
+      border-bottom: 1px solid #333;
+      background-color: #121212;
+      padding: 1rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+    nav button {
+      transition: all 0.3s ease;
+      background-color: #333;
+      color: #f5f5f5;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    nav button:hover {
+      background-color: #ffd700;
+      color: #121212;
+    }
+    
+    h2 {
+  color: #ffd700;
+}
+    a {
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+      color: #ffd700;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #ffd700;
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    table {
+      border-left: 2px solid #444;
+      border-right: 2px solid #444;
+      transition: all 0.3s ease;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background-color: #2c2c2c;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #333;
+      color: #ffd700;
+    }
+    tr:hover {
+      background-color: #333;
+    }
+
+    tr:nth-child(even) {
+      background-color: #252525;
+    }
+      a.active {
+      background-color: #ffd70033;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+    section {
+    scroll-margin-top: 140px;
+  }
+  h2:hover, h3:hover {
+    color: #fff;
+    text-shadow: 0 0 6px #ffd700;
+    transition: all 0.3s ease;
+  }
+  #tools-programme.hover-highlight, h2.hover-highlight {
+    color: #fff !important;
+    text-shadow: 0 0 10px #ffd700;
+    transition: all 0.2s ease;
+  }
+h1 {
+  color: #ffd700;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  color: #e6c560;
+}
+
+h1:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2D-Animationsguide von Jessica</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav>
+    <div class="lang-switch">
+      <button onclick="switchLang('de')">DE</button>
+      <button onclick="switchLang('en')">EN</button>
+    </div>
+  </nav>
+
+  <main>
+    
+
+
+
+    <nav style="position: sticky; top: 0; z-index: 1000; padding: 1rem 2rem; background-color: #1a1a1a; border-bottom: 1px solid #444;">
+      <ul style="display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+  <li><a href="#intro">Start</a></li>
+  <li><a href="#programme">Grundlagen</a></li>
+  <li><a href="#tools">Tools</a></li>
+  <li><a href="#stilfindung">Stil</a></li>
+  <li><a href="#prinzipien">Prinzipien</a></li>
+  <li><a href="#uebungsprojekte">Übungen</a></li>
+  <li><a href="#anime">Anime vs. Cartoon</a></li>
+  <li><a href="#ressourcen">YouTube</a></li>
+  <li><a href="#buecher-kurse">Extra</a></li>
+  <li><a href="#">↑ nach oben</a></li>
+</ul>
+    </nav>
+    
+
+
+    <section id="intro" class="lang lang-de">
   <h1>2D-Animationsguide von Jessica</h1>
   <p>Dieser Guide begleitet dich von den Grundlagen bis zu fortgeschrittenen Techniken der 2D-Animation – inklusive Tipps, Tools, Workflows und Ressourcen.</p>
+</section>
+
+<section id="programme" class="lang lang-de">
+  <h2>1. Grundlagen der 2D-Animation</h2>
+  <p>Es gibt zwei grundlegende Arten der 2D-Animation:</p>
+  <ul>
+    <li><strong>Frame-by-Frame:</strong> Jede Bewegung wird einzeln gezeichnet – klassisch, organisch und vielseitig. Perfekt für emotionale oder ausdrucksstarke Szenen.</li>
+    <li><strong>Bone-Based / Rigging:</strong> Figuren bestehen aus Einzelteilen, die über ein Skelettsystem bewegt werden – effizient für Serien und Spiele.</li>
+  </ul>
+  <p><em>Hinweis:</em> Viele Projekte kombinieren beide Techniken – z. B. Bones für grobe Bewegung, Frame-by-Frame für Gesichtsausdrücke oder Spezialeffekte.</p>
+</section>
+
+<section id="tools" class="lang lang-de">
+  <h2 id="tools-highlight">2. Tools & Programme</h2>
+  <ul>
+    <li><strong>Kostenlos:</strong> Krita (Open Source mit Zeichenfokus), Grease Pencil in Blender (2D in 3D-Umgebung), OpenToonz (Studio Ghibli nutzt es), Tahoma2D (einfachere Version von OpenToonz)</li>
+    <li><strong>Kostenpflichtig:</strong> TVPaint (Industriestandard für traditionelle 2D-Zeichnung), Toon Boom Harmony (für Serienproduktion & Rigging), Moho (ideal für Cut-Out), Cacani (automatisiert Inbetweens), Clip Studio Paint (Manga- und Animationsfokus)</li>
+    <li><strong>iPad:</strong> RoughAnimator (framebasiert und einfach), Callipeg (modern & für Zeichner*innen gedacht), Procreate Dreams (neue App mit Fokus auf visuelles Storytelling)</li>
+    <li><strong>Spezialsoftware:</strong> Spine 2D (für Spielanimationen), Live2D (ideal für VTuber, Echtzeit-Modelle)</li>
+    <li><strong>Compositing:</strong> After Effects (für visuelle Effekte, Kamera, Text, Schnitt, Nachbearbeitung)</li>
+  </ul>
+  <p><em>Tipp:</em> Starte mit einem Tool und lerne es wirklich kennen – z. B. Krita oder Tahoma2D, die sich hervorragend für Einsteiger*innen eignen. Vertrautheit mit dem Workflow ist wichtiger als viele Funktionen.</p>
+  <p>Blender mit Grease Pencil eignet sich besonders für experimentelle oder kombinierte 2D/3D-Animationen. Krita und Tahoma2D sind ideal für klassisches Frame-by-Frame. TVPaint ist ein Industriestandard für professionelle Zeichnungsanimation, während Toon Boom häufig in Studios für serielle Produktionen genutzt wird.</p>
+</section>
+
+<section id="tools" class="lang lang-de">
+  <h2>3. Projektplanung & Arbeitsorganisation</h2>
+    <ul>
+    <li><strong>PureRef:</strong> Für Moodboards & Referenzen</li>
+    <li><strong>Trello / Notion:</strong> Um deine Projekte zu organisieren</li>
+  </ul>
+  
+</section>
+  <section id="stilfindung" class="lang lang-de">
+  <h2>4. Stil & Zeichenentwicklung</h2>
+    <p>Viele Künstler fragen sich am Anfang: „Wie finde ich meinen eigenen Stil?“ – Hier ein paar Gedanken und Tipps:</p>
+  <ul>
+    <li>Dein Stil entwickelt sich mit der Zeit durch konstantes Zeichnen und Animieren</li>
+    <li>Es ist vollkommen okay, am Anfang andere Stile zu imitieren (z. B. Disney, Ghibli, Anime)</li>
+    <li>Beobachte, welche visuellen Elemente dich faszinieren – Farben, Formen, Bewegungsarten</li>
+    <li>Kombiniere Inspirationen bewusst – dein Stil entsteht aus deinen Vorlieben</li>
+  </ul>
+  <p>→ <a href="https://www.youtube.com/watch?v=DHzJMa_pqPY" target="_blank">Hilfreiches YouTube-Video: Wie finde ich meinen Stil?</a></p>
+  <h3>Loomis-Methode</h3>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=GjiCQfCMXow" target="_blank">Loomis Method – Kopf & Proportionen erklärt</a></li>
+    <li><a href="https://www.youtube.com/watch?v=wYWnfJDxfts" target="_blank">Loomis Kopf zeichnen – Schritt für Schritt</a></li>
+  </ul>
+  <h3>Anime-Zeichenstil</h3>
+  <ul>
+    <li><a href="https://www.youtube.com/@KawaiiSenseiDrawing/featured" target="_blank">Kawaii Sensei Drawing</a> – Einsteigerfreundlich, süßer Zeichenstil</li>
+    <li><a href="https://www.youtube.com/@hidechannel2/videos" target="_blank">HIDE Channel</a> – professionelles Character Drawing und Dynamik</li>
+    <li><a href="https://www.youtube.com/@saitonaoki2/videos" target="_blank">Saito Naoki</a> – Designprozesse & Farben im Anime-Stil</li>
+<li><a href="https://www.youtube.com/@Chommang" target="_blank">Chommang</a> – Speedpaints & Einblicke in Character Design</li>
+    </ul>
+  </ul>
+  <p><em>Erlaube dir, dich auszuprobieren – dein Stil ist kein Ziel, sondern ein wachsender Prozess.</em></p>
+</section>
+
+<section id="prinzipien" class="lang lang-de">
+<h2>5. Animationsprinzipien (Disney)</h2>
+  <p>Die 12 Prinzipien wurden von Disney-Animatoren entwickelt und bilden bis heute das Fundament glaubwürdiger Animation. Sie helfen dabei, Bewegung lebendig, verständlich und ausdrucksstark zu gestalten:</p>
+  <ul>
+    <li><strong>Squash & Stretch:</strong> Dehnung und Stauchung für Volumen und Flexibilität</li>
+    <li><strong>Anticipation:</strong> Vorbereitung auf eine Bewegung – macht die Animation lesbar</li>
+    <li><strong>Staging:</strong> Klare Präsentation der Handlung oder Idee im Bild</li>
+    <li><strong>Straight Ahead & Pose to Pose:</strong> Zwei Herangehensweisen – flüssig vs. geplant</li>
+    <li><strong>Follow Through & Overlapping Action:</strong> Bewegungsnachlauf und verzögerte Körperteile</li>
+    <li><strong>Slow In & Slow Out:</strong> Beschleunigung und Verzögerung für realistischere Bewegung</li>
+    <li><strong>Arcs:</strong> Natürlich geschwungene Bewegungsbahnen</li>
+    <li><strong>Secondary Action:</strong> Begleitbewegungen zur Unterstützung der Hauptbewegung</li>
+    <li><strong>Timing:</strong> Anzahl der Frames bestimmt Geschwindigkeit und Gewicht</li>
+    <li><strong>Exaggeration:</strong> Übertreibung für Ausdruck und Wirkung</li>
+    <li><strong>Solid Drawing:</strong> Guter Zeichenstil mit Volumen, Perspektive und Balance</li>
+    <li><strong>Appeal:</strong> Visuelle Anziehungskraft und Charakterpräsenz</li>
+  </ul>
+  <p>→ <a href="https://www.youtube.com/watch?v=uDqjIdI4bF4" target="_blank">YouTube-Video: Die 12 Prinzipien verständlich erklärt</a></p>
+  <p><strong>Übungsvideos zu den Prinzipien:</strong></p>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=37L-8lbyS1Y" target="_blank">Ball Bounce Animation Tutorial</a> – ideal zum Einstieg</li>
+    <li><a href="https://www.youtube.com/watch?v=dpwgmOGJQIw" target="_blank">Advanced Practice: Pose & Timing</a> – für Fortgeschrittene</li>
+  </ul>
+  <p><em>Übe diese Prinzipien einzeln in kleinen Animationen – z. B. mit einem springenden Ball oder flatterndem Tuch.</em></p>
+</section>
+</section>
+<section id="uebungsprojekte" class="lang lang-de">
+  <h2>6. Übungsprojekte & Fehler vermeiden</h2>
+
+  <h3>Übungsprojekte für Einsteiger</h3>
+  <ul>
+    <li><strong>Ball Bounce</strong> – mit Squash & Stretch</li>
+    <li><strong>Blatt im Wind</strong> – Leicht und chaotisch, ideal für Spacing und Timing</li>
+    <li><strong>Laufzyklen</strong> – z. B. genervt, fröhlich, schwer beladen</li>
+    <li><strong>Gesichtsausdruck verändern</strong> – z. B. neutral → überrascht</li>
+    <li><strong>Dialoganimation</strong> – z. B. „Hallo… äh… ich liebe dich.“</li>
+    <li><strong>Lipsync</strong> – kurze Clips mit Audioschnipseln animieren</li>
+  </ul>
+  <p><em>Tipp:</em> Halte die Projekte kurz (3–5 Sekunden), um schnell Erfahrungen zu sammeln.</p>
+
+  <h3>Häufige Anfängerfehler</h3>
+  <ul>
+    <li><strong>Zu hohe Erwartungen:</strong> Starte klein und realistisch</li>
+    <li><strong>Kein Plan:</strong> Skizziere grob oder mache Storyboards</li>
+    <li><strong>Unregelmäßige Übung:</strong> Lieber täglich 10 Minuten als 3h pro Woche</li>
+    <li><strong>Zu viel Vergleich mit Profis:</strong> Fokus auf den eigenen Fortschritt</li>
+    <li><strong>Kein Feedback holen:</strong> Teile deine Animationen – z. B. auf Discord</li>
+  </ul>
+
+  <h3>Fortgeschrittene Techniken</h3>
+  <ul>
+    <li>Acting & Körpersprache – emotionale Tiefe durch Bewegung</li>
+    <li>Lipsync & Dialoganimation – präzise Mundformen + Timing</li>
+    <li>Timing Charts & Animatics – effiziente Planung & Vorschau</li>
+    <li>Follow Through – Haare, Kleidung, Props</li>
+    <li>Kamerabewegungen – Parallax, Zooms, cineastisches Framing</li>
+    <li>Efficient Workflow – Layerstruktur, Reuse, Smart Coloring</li>
+    <li>Animieren mit Referenzmaterial – inkl. Rotoscoping</li>
+  </ul>
+</section>
+
+    <section id="anime" class="lang lang-de">
+  <h2>7. Anime Workflow vs. Amerikanischer Workflow</h2>
+            <p>Die japanische und die amerikanische Animationsindustrie verfolgen unterschiedliche Produktionsmodelle. Hier ein kompakter Überblick:</p>
+
+      <h3>Japanischer Workflow (Anime):</h3>
+      <ul>
+        <li>Keyframes = Genga, Inbetweens = Dōga</li>
+        <li>Weniger FPS (z. B. 8–12), aber präzise gesetzte Posen für maximalen Ausdruck</li>
+        <li>Keyframes werden von erfahrenen Animator*innen erstellt</li>
+        <li>Inbetweens werden oft ausgelagert</li>
+        <li>Sound wird meist erst nach der Animation erstellt</li>
+        <li>Wichtige Begriffe: Sakuga (besonders flüssige Szenen), Timing Sheets, Layouts, Bank Scenes</li>
+        <li>Fokus auf starke Bildsprache, Emotion und Effizienz</li>
+      </ul>
+
+      <h3>Amerikanischer Workflow:</h3>
+      <ul>
+        <li>Meist 24 FPS – flüssige Bewegung mit vielen Inbetweens</li>
+        <li>Voice Acting wird zuerst aufgenommen</li>
+        <li>Storyboards & Animatics werden früh erstellt</li>
+        <li>Fokus auf technische Sauberkeit, Timing und Übergänge</li>
+        <li>Mehr Einsatz von Rigs & Cut-Out-Animation bei Serien</li>
+      </ul>
+
+      <p>Beide Workflows haben ihre Stärken – der japanische eignet sich gut für emotionale, stilisierte Szenen, der amerikanische für flüssige, dynamische Bewegungsabläufe.</p>
+      <p>→ TikTok: <a href="https://www.tiktok.com/@spywismindpalace" target="_blank">@spywismindpalace</a> erklärt viele japanische Techniken verständlich</p>
+      <p>→ YouTube: <a href="https://youtube.com/@dongchang" target="_blank">@dongchang</a> analysiert Anime-Animation auf hohem Niveau</p>
+    
+  <h3>Zusätzlicher Überblick: Produktionspipeline im Vergleich</h3>
+<p>Ein tabellarischer Vergleich zwischen dem klassischen amerikanischen Workflow und der japanischen Anime-Produktion – Schritt für Schritt:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Schritt</th>
+      <th>Amerikanischer Workflow 🇺🇸</th>
+      <th>Japanischer Workflow 🇯🇵</th>
+    </tr>
+  </thead>
+    <tbody>
+  <tr>
+    <td>1. Konzept & Planung</td>
+    <td>Pitch, Writers' Room, interne Konzeptentwicklung</td>
+    <td>Adaptation einer bestehenden IP (Manga, Light Novel)</td>
+  </tr>
+  <tr>
+    <td>2. Skript</td>
+    <td>Finales Drehbuch mit Dialogen & Regieanweisungen</td>
+    <td>Meist parallel zum Manga entwickelt oder aus Roman adaptiert</td>
+  </tr>
+  <tr>
+    <td>3. Storyboard</td>
+    <td>Storyboard + Tonlayout (teilweise mit Voice Track)</td>
+    <td>Storyboard (E-Conte) mit Layoutskizzen</td>
+  </tr>
+  <tr>
+    <td>4. Animatic / Layout</td>
+    <td>Animatic mit Timing & vorläufigem Ton</td>
+    <td>Layout mit Genga Key Poses</td>
+  </tr>
+  <tr>
+    <td>5. Voice Acting</td>
+    <td>Synchronsprecher*innen vor der Animation</td>
+    <td>Nach der Animation (lip-sync wird visuell geplant)</td>
+  </tr>
+  <tr>
+    <td>6. Key Animation</td>
+    <td>Key Poses + Extreme Posen von Hauptanimator*innen</td>
+    <td>Genga durch Senior-Animator*innen</td>
+  </tr>
+  <tr>
+    <td>7. Inbetweens</td>
+    <td>Inhouse oder Outsourcing (je nach Budget)</td>
+    <td>Dōga meist ausgelagert (Korea, China, Vietnam)</td>
+  </tr>
+  <tr>
+    <td>8. Clean-Up & Color</td>
+    <td>Zeichnungssäuberung + digitale Kolorierung</td>
+    <td>Digital Inking + Farbe nach Farbreferenz</td>
+  </tr>
+  <tr>
+    <td>9. Compositing</td>
+    <td>After Effects, Photoshop, Spezialeffekte</td>
+    <td>Oft mit minimalen Effekten, Fokus auf Timing</td>
+  </tr>
+  <tr>
+    <td>10. Sound & Musik</td>
+    <td>Mixing, Sounddesign, Musik wird angepasst</td>
+    <td>Soundtrack & Effekte nach fertiger Animation</td>
+  </tr>
+  <tr>
+    <td>11. Finaler Export</td>
+    <td>TV / Kino / Streaming-Plattformen</td>
+    <td>TV-Ausstrahlung oder Bluray/DVD Release</td>
+  </tr>
+</tbody>
+  </table>
+</section>
+
+<section id="ressourcen" class="lang lang-de">
+  <h2>8. Empfohlene YouTube-Kanäle</h2>
+            <ul>
+        <li><strong>Toniko Pantoja</strong> – Storyboarding, Acting, Szeneaufbau: <a href="https://www.youtube.com/playlist?list=PL1G92gHt-pRPwIwtANHmDvX_jV0Q8u1J5">Playlist</a></li>
+        <li><strong>Micah Buzan</strong> – Stilisiert & kreativ, einfache Übungen: <a href="https://www.youtube.com/playlist?list=PLPynJgxE2ZsWwp1B-JN7Fm8RWoauZzNsJ">Playlist</a></li>
+        <li><strong>Nicca Ch</strong> – Anime-Workflow erklärt, Zeichentechniken: <a href="https://www.youtube.com/playlist?list=PLzusuqpev_sXl6WbyTP8TwLYea_SnKU2N">Playlist</a></li>
+        <li><strong>Manu Mercurial</strong> – Bewegungsanalyse & Anime-Stil: <a href="https://www.youtube.com/@ManuMercurial/videos">Videos</a></li>
+        <li><strong>Howard Wimshurst</strong> – Dynamik, Komposition, Interviews: <a href="https://www.youtube.com/@HowardWimshurst/videos">Videos</a></li>
+        <li><strong>Aaron Blaise</strong> – Ex-Disney Animator (Charakter, Tiere, Storytelling): <a href="https://www.youtube.com/@AaronBlaiseArt">Videos</a></li>
+        <li><strong>Tim Hodge</strong> – Storyboarding-Technik, szenisches Denken: <a href="https://www.youtube.com/playlist?list=PLnwHSDbcd45I9tK7-N40QRQHqaON1mv40">Playlist</a></li>
+      </ul>
+    </section>
+
+<h2>9. After Effects – Postproduktion</h2>
+  <p><strong>Einsteiger-Videos zu After Effects und Postproduktion</strong></p>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=XjKT9rMEKKU" target="_blank">After Effects Basics – Einführung in Keyframes, Ebenen & Timeline</a></li>
+    <li><a href="https://www.youtube.com/watch?v=jv4axtpnZps" target="_blank">After Effects Fortgeschritten – Effekte, Motion Blur & Compositing</a></li>
+  </ul>
+</section>
+    
+
+    <section id="buecher-kurse" class="lang lang-de">
+  <h2>10. Bücher & Online-Kurse</h2>
+            <h3>Bücher:</h3>
+      <ul>
+        <li><strong>The Animator’s Survival Kit</strong> – Richard Williams (Pflichtlektüre)</li>
+        <li><strong>Disney Animation: The Illusion of Life</strong> – visuell & historisch</li>
+        
+      </ul>
+      <h3>Online-Kurse:</h3>
+      <ul>
+        <li><strong>Aaron Blaise:</strong> Hochwertige Kurse auf <a href="https://creatureartteacher.com" target="_blank">creatureartteacher.com</a></li>
+        
+<p><em>Hinweis:</em> Du musst keine Kurse kaufen – viele Lerninhalte sind auch kostenlos verfügbar (z. B. auf YouTube oder in Communities).</p>
+      </ul>
+    </section>
+
+    
+
+    
+
+    
+  </main>
+
+  <script>
+    function switchLang(lang) {
+      const allSections = document.querySelectorAll('.lang');
+      allSections.forEach(section => {
+        section.style.display = section.classList.contains('lang-' + lang) ? 'block' : 'none';
+      });
+    }
+  </script>
+  <script>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  document.querySelector('a[href="#tools"]').addEventListener('mouseenter', () => {
+  const heading = document.querySelector('#tools-highlight');
+  if (heading) heading.classList.add('hover-highlight');
+});
+
+document.querySelector('a[href="#tools"]').addEventListener('mouseleave', () => {
+  const heading = document.querySelector('#tools-highlight');
+  if (heading) heading.classList.remove('hover-highlight');
+});
+</script>
 </body>
 </html>
