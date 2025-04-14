@@ -3,6 +3,10 @@
 <head>
   <style>
     body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-left: 4rem;
   padding-right: 4rem;
   max-width: 1200px;
@@ -124,7 +128,7 @@ h1:hover {
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav style="width: 100vw; margin-left: calc(-50vw + 50%);">
+  <nav style="width: 100vw; max-width: 100%; margin-left: 0; padding: 0.5rem 1.5rem;">
     <div class="lang-switch">
       <button onclick="switchLang('de')">DE</button>
       <button onclick="switchLang('en')">EN</button>
@@ -136,7 +140,7 @@ h1:hover {
 
 
 
-    <nav style="position: sticky; top: 0; z-index: 1000; padding: 1rem 2rem; background-color: #1a1a1a; border-bottom: 1px solid #333; width: 100vw; margin-left: calc(-50vw + 50%);">
+    <nav style="position: sticky; top: 0; z-index: 1000; padding: 0.75rem 1.5rem; background-color: #1a1a1a; border-bottom: 1px solid #333; width: 100vw; margin-left: calc(-50vw + 50%);">
       <ul style="display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
   <li><a href="#intro">Start</a></li>
   <li><a href="#programme">Grundlagen</a></li>
@@ -457,8 +461,5 @@ document.querySelector('a[href="#tools"]').addEventListener('mouseleave', () => 
   if (heading) heading.classList.remove('hover-highlight');
 });
 </script>
-</body>
-</html>
-
 </body>
 </html>
